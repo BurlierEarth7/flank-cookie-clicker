@@ -1,0 +1,146 @@
+body {
+  user-select: none;
+  background-color: rgba(44, 185, 185, 1);
+  animation: sweep 1.2s ease forwards 1;
+}
+* {
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+    "sans-serif";
+}
+
+#clicks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#flankbutton {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(236, 42, 42, 1);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 3em;
+  border-radius: 50%;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+    "sans-serif";
+}
+#flankbutton:active {
+	font-size: 2.9em;
+  background-color: rgba(202, 17, 26, 1);
+  box-shadow: inset 0px 0px 5px #c1c1c1;
+}
+
+#shop label {
+  font-size: 1.1em;
+  font-weight: lighter;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+    "sans-serif";
+}
+
+.center-text {
+  text-align: center;
+}
+#title {
+  font-size: 3.5em;
+  font-weight: lighter;
+}
+.underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.25px;
+  top: 110%;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out backwards;
+}
+
+#clickables {
+  display: inline-block;
+}
+.align {
+  display: inline-block;
+}
+
+#shop {
+  position: absolute;
+  margin-left: 150px;
+  margin-bottom: 10px;
+  margin-right: 200px;
+}
+
+[id*="stat_"] {
+  /* anything containing stat_ class*/
+  font-size: 1.3em;
+}
+
+[id*="inftxt_"] {
+  font-style: italic;
+  font-size: 110%;
+}
+
+#statistics {
+  position: absolute;
+  right: 20px;
+  text-align: right;
+  margin-right: 150px;
+  margin-bottom: 10px;
+  float: right;
+}
+#shoptitle {
+  font-size: 2.5em;
+  font-weight: lighter;
+
+  margin-bottom: 20px;
+}
+
+#statstitle {
+  font-size: 2.5em;
+  font-weight: lighter;
+
+  margin-bottom: 20px;
+}
+
+/*buttons*/
+.items {
+  font-size: 1.3em;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+    "sans-serif";
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}

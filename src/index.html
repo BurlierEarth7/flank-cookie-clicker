@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--Icon-->
+<link rel="icon" href="images/dambutton.png">
+<!--CSS-->
+<link rel="stylesheet" href="style.css" type="text/css">
+<title>Flank Clicker</title>
+</head>
+<script src="script.js"></script>
+<body>
+<h1 class="center-text" id="title">The Flank Clicker!</h1>
+<p id="clicksTxt" data-target="1000" class="center-text">Total Clicks: </p>
+	<p id="clicks" data-target="1000" class="center-text count">0</p>
+<div id="clickables">
+	<div id="shop" class="align">
+	<details>
+		<summary id="shoptitle" class="underline-animation">Shop</summary>
+		<br>
+		<div id="purchasableItems">
+			<button class="items" id="clickerItem" onClick="checkPricing(items['clicker'], prices['clicker'])">Clicker</button>
+			<label for="clickerItem" id="clickerLabel">50 Clicks</label>
+			<details id="info_clicker">
+				<summary>Info</summary>
+				<p id="inftxt_clicker"></p>
+			</details><br>
+			<button class="items" id="multiplierItem" onClick="checkPricing(items['multiplier'], prices['multiplier'])">Upgrade Multiplier</button>
+			<label for="multiplierItem" id="multiplierLabel">100 Clicks</label>
+			<details id="info_multiplier">
+				<summary>Info</summary>
+				<p id="inftxt_multiplier"></p>
+			</details><br>
+			<button class="items" id="gambleItem" onClick="promptGamble()">Gamble Clicks</button>
+			<label for="gambleItem" id="gambleLabel">Price Varies</label>
+			<details id="info_gamble">
+				<summary>Info</summary>
+				<p id="inftxt_gamble"></p>
+			</details>
+		</div>
+	</details>
+</div>
+<div id="statistics" class="align">
+	<details>
+		<summary id="statstitle" class="underline-animation">Statistics</summary>
+		<br>
+		<div id="playerStats">
+			<p id="stat_clicker">Clickers: 0</p>
+			<p id="stat_multiplier">Current Multiplier: 1x</p>
+			<button onClick="askReset()" id="stat_resetGameButton">Reset Game</button>
+		</div>
+	</details>	
+</div>
+</div>
+
+<button class="" id="flankbutton" onClick="flankbuttonclicked()">Flank</button>
+</body>
+</html>
